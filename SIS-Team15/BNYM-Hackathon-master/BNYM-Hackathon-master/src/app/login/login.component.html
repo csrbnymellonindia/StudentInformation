@@ -1,0 +1,10 @@
+<div class="text-center"><h2>Welcome to Student Information System</h2></div>
+<div class="log-form">
+    <h2>Login to Admin account</h2>
+    <div id="admin-login-error"></div>
+    <form>
+      <input type="text" title="Email"name="email" [(ngModel)]="email" placeholder="Enter email" />
+      <input type="password" title="username" name="password" [(ngModel)]="password" placeholder="password"/>
+      <button type="submit" class="btn" (click)="logInUser()">Login</button>
+    </form>
+  </div><!--end log form -->
