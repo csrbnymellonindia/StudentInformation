@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+
+    <!-- Custom Css --> 
+
+    <!-- FontAwesome 5 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navbar top -->
+    <div class="navbar-top">
+        <div class="title">
+            <h1>Profile</h1>
+        </div>
+        <!-- End -->
+    </div>
+    <!-- End -->
+    <!-- Sidenav -->
+    <div class="sidenav">
+        <div class="profile">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="" width="100" height="100">
+
+            <div class="name">
+                {{data.email}}
+            </div>
+            <div class="job">
+                {{data.name}}
+            </div>
+        </div>
+    </div>
+    <!-- End -->
+
+    <!-- Main -->
+    <div class="main">
+        <h2>IDENTITY</h2>
+        <div class="card">
+            <div class="card-body">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Name </td>
+                            <td>:</td>
+                            <td>{{data.name}}</td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td>:</td>
+                            <td>{{data.email}}</td>
+                        </tr>
+                        <tr>
+                            <td>Address</td>
+                            <td>:</td>
+                            <td>{{data.imageUrl}}</td>
+                        </tr>
+                        <tr>
+                            <td>Phone No</td>
+                            <td>:</td>
+                            <td>{{data.phone}}</td>
+                        </tr>
+                        <tr>
+                            <td>Standard</td>
+                            <td>:</td>
+                            <td>{{data.std}}</td>
+                        </tr>
+                        <tr>
+                            <td>id</td>
+                            <td>:</td>
+                            <td>{{data.id}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+    <!-- End -->
+</body>
+
+</html>
