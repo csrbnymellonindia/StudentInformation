@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient,HttpErrorResponse } from '@angular/common/http';
+import { HttpClient,HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { API } from 'src/environments/environment';
 import { ActivatedRoute, Router } from '@angular/router';
 import { catchError, map } from 'rxjs/operators';
@@ -9,13 +9,18 @@ import { catchError, map } from 'rxjs/operators';
 })
 export class UsersServiceService {
 
+  headers=new HttpHeaders({
+    'Content-Type':'application/json'
+  })
+
   constructor(private http:HttpClient,private router:Router,private route:ActivatedRoute) {}
-
-  fetchuserhistory(form:FormData){
-    return this.http.post<any>(`${API}/fetch/userhistory`,form,{observe:'response'});
+  getUserProfileService(id:String){
+    return this.http.get<any>(`${API}/volunteer/profile/`+id);
   }
-  fetchRejectuserhistory(form:FormData){
-    return this.http.post<any>(`${API}/fetch/rejecthistory`,form,{observe:'response'});
+  updateProfile(form:String,id:String){
 
+    return this.http.put<any>(`${API}/volunteer/profile/`+id,form,{headers:this.headers,observe:'response'});
   }
+
+
 }

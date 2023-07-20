@@ -1,0 +1,22 @@
+.table-container {
+  position: relative;
+  max-height: 400px;
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+}
+
+.action:hover{
+  cursor:pointer;
+}
+
+.unmapped{
+  margin-top: 20px;
+}
+
+.mapBtn{
+  display:flex;
+  justify-content: end;
+}
